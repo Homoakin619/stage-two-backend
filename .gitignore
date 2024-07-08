@@ -1,7 +1,6 @@
 node_modules
 build
 coverage
-.vscode
 .DS_STORE
 .env
 tmp
@@ -18,3 +17,6 @@ logs
 .yarn/install-state.gz
 .pnp.*
 .yarn-integrity
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
