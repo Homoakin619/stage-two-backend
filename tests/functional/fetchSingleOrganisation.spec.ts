@@ -7,7 +7,7 @@ import { OrganisationFactory } from 'Database/factories/OrganisationFactory'
 
 test.group('FetchSingleOrganisationController', (group) => {
   let user: User
-  let user2: User
+  
   let orgId: string
   let secondOrgId: string
 
@@ -15,7 +15,7 @@ test.group('FetchSingleOrganisationController', (group) => {
     await Database.beginGlobalTransaction()
 
     user = await UserFactory.create()
-    user2 = await UserFactory.create()
+    
     
     const organisation = await OrganisationFactory.create()
     orgId = organisation.orgId
