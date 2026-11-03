@@ -15,7 +15,7 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "node init && rollup -c"
   },
   "repository": "https://github.com/angus-c/just",
   "keywords": [

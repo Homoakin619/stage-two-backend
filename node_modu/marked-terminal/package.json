@@ -16,7 +16,7 @@
     "node": ">=14.13.1 || >=16.0.0"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "node init && rollup -c",
     "prepack": "npm run build",
     "test": "FORCE_HYPERLINK=0 mocha tests/*.js --reporter spec"
   },

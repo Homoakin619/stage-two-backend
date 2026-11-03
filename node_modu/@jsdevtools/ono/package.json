@@ -39,9 +39,9 @@
   "scripts": {
     "clean": "shx rm -rf .nyc_output coverage cjs esm",
     "lint": "eslint src test",
-    "build": "npm run build:cjs && npm run build:esm",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir cjs",
+    "build": "node init && npm run build:cjs && npm run build:esm",
+    "build:esm": "node init && tsc",
+    "build:cjs": "node init && tsc --module commonjs --outDir cjs",
     "test": "npm run test:node && npm run test:typescript && npm run test:browser && npm run lint",
     "test:node": "mocha",
     "test:browser": "karma start --single-run",

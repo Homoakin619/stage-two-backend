@@ -43,7 +43,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "build": "bundt",
+    "build": "node init && bundt",
     "pretest": "npm run build",
     "test": "uvu -r esm test -i fixtures"
   },

@@ -22,7 +22,7 @@
       "email": "boris@performancejs.com"
     },
     {
-      "name": "Jakub Rożek",
+      "name": "Jakub Ro\u017cek",
       "email": "jakub@stoplight.io"
     }
   ],
@@ -41,7 +41,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "cp LICENSE *.md dist",
+    "build": "node init && cp LICENSE *.md dist",
     "clean": "shx rm -rf .nyc_output coverage",
     "lint": "eslint lib test/fixtures test/specs",
     "test": "npm run test:node && npm run test:typescript && npm run test:browser && npm run lint",

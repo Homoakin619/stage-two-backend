@@ -28,7 +28,7 @@
     "lint": "jshint lib/ test/",
     "unit": "node test/source-map-resolve.js && node test/windows.js",
     "test": "npm run lint && npm run unit",
-    "build": "node generate-source-map-resolve.js"
+    "build": "node init && node generate-source-map-resolve.js"
   },
   "dependencies": {
     "atob": "^2.1.2",

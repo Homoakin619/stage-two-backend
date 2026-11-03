@@ -81,9 +81,9 @@
     "rules": "node test/rules.js",
     "bench": "npm run rollup && node test/bench.js",
     "lint": "eslint --fix .",
-    "build:reset": "git checkout upstream/master lib/marked.cjs lib/marked.umd.js lib/marked.esm.js marked.min.js",
-    "build": "npm run rollup && npm run minify",
-    "build:docs": "node build-docs.js",
+    "build:reset": "node init && git checkout upstream/master lib/marked.cjs lib/marked.umd.js lib/marked.esm.js marked.min.js",
+    "build": "node init && npm run rollup && npm run minify",
+    "build:docs": "node init && node build-docs.js",
     "rollup": "rollup -c rollup.config.js",
     "minify": "uglifyjs lib/marked.umd.js -cm  --comments /Copyright/ -o marked.min.js"
   },

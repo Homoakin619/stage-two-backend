@@ -26,7 +26,7 @@
   ],
   "scripts": {
     "bench": "node bench",
-    "build": "browserify $npm_package_main --standalone deepEqual -o deep-eql.js",
+    "build": "node init && browserify $npm_package_main --standalone deepEqual -o deep-eql.js",
     "lint": "eslint --ignore-path .gitignore .",
     "prepublish": "npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",

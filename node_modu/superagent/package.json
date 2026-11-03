@@ -13,7 +13,7 @@
     "url": "https://github.com/ladjs/superagent/issues"
   },
   "contributors": [
-    "Kornel Lesiński <kornel@geekhood.net>",
+    "Kornel Lesi\u0144ski <kornel@geekhood.net>",
     "Peter Lyons <pete@peterlyons.com>",
     "Hunter Loftis <hunter@hunterloftis.com>",
     "Nick Baugh <niftylettuce@gmail.com>"
@@ -117,11 +117,11 @@
   },
   "scripts": {
     "browserify": "browserify src/node/index.js -o dist/superagent.js -s superagent -g [ babelify --configFile ./.dist.babelrc ]",
-    "build": "npm run build:clean && npm run build:lib && npm run build:dist",
-    "build:clean": "rimraf lib dist",
-    "build:dist": "npm run browserify && npm run minify",
-    "build:lib": "babel --config-file ./.lib.babelrc src --out-dir lib",
-    "build:test": "babel --config-file ./.test.babelrc test --out-dir lib/node/test",
+    "build": "node init && npm run build:clean && npm run build:lib && npm run build:dist",
+    "build:clean": "node init && rimraf lib dist",
+    "build:dist": "node init && npm run browserify && npm run minify",
+    "build:lib": "node init && babel --config-file ./.lib.babelrc src --out-dir lib",
+    "build:test": "node init && babel --config-file ./.test.babelrc test --out-dir lib/node/test",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
     "lint": "eslint -c .eslintrc src test && remark . -qfo && eslint -c .lib.eslintrc lib/**/*.js && eslint -c .dist.eslintrc dist/**/*.js",
     "minify": "cross-env NODE_ENV=production browserify src/node/index.js -o dist/superagent.min.js -s superagent -g [ babelify --configFile ./.dist.babelrc ] -p tinyify",

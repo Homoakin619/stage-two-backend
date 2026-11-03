@@ -8,8 +8,8 @@
     "url": "https://github.com/krisselden/dag-map.git"
   },
   "scripts": {
-    "build": "ember build",
-    "build:production": "ember build --environment=production",
+    "build": "node init && ember build",
+    "build:production": "node init && ember build --environment=production",
     "test": "ember test",
     "test:server": "ember test --server",
     "prepublish": "ember build --environment production"

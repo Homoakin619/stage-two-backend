@@ -52,7 +52,7 @@
     "url": "https://github.com/ericelliott/cuid.git"
   },
   "scripts": {
-    "build": "mkdirp dist && browserify index.js -s cuid -o dist/cuid.js && uglifyjs dist/cuid.js -c -m -o dist/cuid.min.js",
+    "build": "node init && mkdirp dist && browserify index.js -s cuid -o dist/cuid.js && uglifyjs dist/cuid.js -c -m -o dist/cuid.min.js",
     "lint": "eslint index.js lib test",
     "prepare": "npm run build",
     "test": "npm run -s lint && npm run -s test:server && npm run -s test:random && npm run -s test:browser && npm run -s test:worker",

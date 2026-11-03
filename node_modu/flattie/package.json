@@ -29,7 +29,7 @@
     "node": ">=8"
   },
   "scripts": {
-    "build": "bundt",
+    "build": "node init && bundt",
     "bench": "node bench",
     "test": "uvu -r esm test"
   },

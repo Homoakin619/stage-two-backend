@@ -12,7 +12,7 @@
     "prepublishOnly": "npm run build",
     "pretest": "npm run lint && npm run build",
     "test": "node japaFile.js",
-    "build": "rollup -c rollup.config.js",
+    "build": "node init && rollup -c rollup.config.js",
     "lint": "standard src/**/*.js index.js test/**/*.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "benchmark": "matcha benchmarks/index.js"

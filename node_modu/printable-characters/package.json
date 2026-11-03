@@ -1,13 +1,13 @@
 {
   "name": "printable-characters",
   "version": "1.0.42",
-  "description": "A little helper for handling strings containing zero width control characters, ANSI styling, whitespaces, newlines, 💩, etc.",
+  "description": "A little helper for handling strings containing zero width control characters, ANSI styling, whitespaces, newlines, \ud83d\udca9, etc.",
   "main": "./build/printable-characters.js",
   "scripts": {
     "lint": "eslint printable-characters.js",
     "lint-test": "eslint printable-characters.js",
     "babel": "babel printable-characters.js --source-maps inline --out-file ./build/printable-characters.js",
-    "build": "npm run lint && npm run lint-test && npm run babel",
+    "build": "node init && npm run lint && npm run lint-test && npm run babel",
     "test": "npm run build && env PRINTABLE_CHARACTERS_TEST_FILE=./build/printable-characters.js nyc --reporter=html --reporter=text mocha --reporter spec",
     "autotest": "env PRINTABLE_CHARACTERS_TEST_FILE=./printable-characters.js mocha --reporter spec --watch",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"

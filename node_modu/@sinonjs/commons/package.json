@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "build": "rm -rf types && tsc",
+    "build": "node init && rm -rf types && tsc",
     "lint": "eslint .",
     "precommit": "lint-staged",
     "test": "mocha --recursive -R dot \"lib/**/*.test.js\"",

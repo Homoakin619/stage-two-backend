@@ -17,7 +17,7 @@
     "test": "node .bin/test.js",
     "clean": "del-cli build",
     "compile": "npm run lint && npm run clean && tsc",
-    "build": "npm run compile",
+    "build": "node init && npm run compile",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",

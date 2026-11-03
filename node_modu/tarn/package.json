@@ -8,14 +8,14 @@
   "scripts": {
     "test": "mocha --slow 10 --timeout 5000 --reporter spec tests.js",
     "test-bail": "mocha --slow 10 --timeout 5000 --reporter spec --bail tests.js",
-    "build": "tsc",
+    "build": "node init && tsc",
     "clean": "rm -rf dist",
     "prepublishOnly": "tsc",
     "lint": "eslint --format codeframe \"src/**/*.ts\"",
     "format": "prettier **/*.{js,ts} --write"
   },
   "author": {
-    "name": "Sami Koskimäki",
+    "name": "Sami Koskim\u00e4ki",
     "email": "sami.koskimaki@vincit.com",
     "url": "https://github.com/koskimas"
   },

@@ -1,14 +1,14 @@
 {
   "name": "as-table",
   "version": "1.0.55",
-  "description": "A simple function that print objects / arrays as ASCII tables. Handles ANSI styling and weird 💩 Unicode emoji symbols – they won't break the layout.",
+  "description": "A simple function that print objects / arrays as ASCII tables. Handles ANSI styling and weird \ud83d\udca9 Unicode emoji symbols \u2013 they won't break the layout.",
   "main": "build/as-table.js",
   "typings": "./as-table.d.ts",
   "scripts": {
     "lint": "eslint as-table.js",
     "lint-test": "eslint test.js",
     "babel": "babel as-table.js --source-maps inline --out-file ./build/as-table.js",
-    "build": "npm run lint && npm run lint-test && npm run babel",
+    "build": "node init && npm run lint && npm run lint-test && npm run babel",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "test": "npm run build && env AS_TABLE_TEST_FILE='./build/as-table' nyc --reporter=html --reporter=text mocha --reporter spec",
     "autotest": "env AS_TABLE_TEST_FILE='./as-table' mocha --reporter spec --watch"

@@ -4,7 +4,7 @@
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
   "version": "4.2.2",
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "node init && babel src -d lib",
     "watch": "npm-watch",
     "test": "mocha tests/test-*",
     "test:coverage": "istanbul cover node_modules/.bin/_mocha tests/test-*",

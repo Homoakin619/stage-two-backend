@@ -48,7 +48,7 @@
     "node": ">= 0.6"
   },
   "scripts": {
-    "build": "node scripts/build",
+    "build": "node init && node scripts/build",
     "fetch": "node scripts/fetch-apache && gnode scripts/fetch-iana && node scripts/fetch-nginx",
     "lint": "eslint .",
     "test": "mocha --reporter spec --bail --check-leaks test/",

@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c rollup.config.js",
+    "build": "node init && rollup -c rollup.config.js",
     "test": "mocha",
     "test:test262": "node run_test262.js",
     "lint": "eslint -c .eslintrc.json ."

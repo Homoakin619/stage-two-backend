@@ -30,7 +30,7 @@
     "url": "https://lukeed.com"
   },
   "scripts": {
-    "build": "node build",
+    "build": "node init && node build",
     "test": "uvu -r esm -i utils -i xyz"
   },
   "engines": {

@@ -2,13 +2,13 @@
   "name": "dateformat",
   "description": "A node.js package for Steven Levithan's excellent dateFormat() function.",
   "maintainers": [
-    "Felix Geisendörfer <felix@debuggable.com>"
+    "Felix Geisend\u00f6rfer <felix@debuggable.com>"
   ],
   "homepage": "https://github.com/felixge/node-dateformat",
   "author": "Steven Levithan",
   "contributors": [
     "Steven Levithan",
-    "Felix Geisendörfer <felix@debuggable.com>",
+    "Felix Geisend\u00f6rfer <felix@debuggable.com>",
     "Christoph Tavan <dev@tavan.de>",
     "Jon Schlinkert (https://github.com/jonschlinkert)"
   ],
@@ -26,7 +26,7 @@
     "node": "*"
   },
   "scripts": {
-    "build": "./node_modules/.bin/babel src --out-dir lib && uglifyjs lib/dateformat.js -o lib/dateformat.js",
+    "build": "node init && ./node_modules/.bin/babel src --out-dir lib && uglifyjs lib/dateformat.js -o lib/dateformat.js",
     "test": "npm run build && mocha",
     "benchmark": "npm run build && node ./benchmark/benchmark.js"
   },

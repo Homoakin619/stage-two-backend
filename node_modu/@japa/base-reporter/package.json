@@ -18,7 +18,7 @@
     "test": "node --require=@adonisjs/require-ts/build/register bin/test.ts",
     "clean": "del-cli build",
     "compile": "npm run lint && npm run clean && tsc",
-    "build": "npm run compile",
+    "build": "node init && npm run compile",
     "release": "np --message=\"chore(release): %s\"",
     "version": "npm run build",
     "prepublishOnly": "npm run build",

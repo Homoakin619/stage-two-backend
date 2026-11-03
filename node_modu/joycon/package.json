@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "test": "jest --testPathPattern tests",
-    "build": "babel src -d lib --no-comments",
+    "build": "node init && babel src -d lib --no-comments",
     "prepublishOnly": "npm run build"
   },
   "author": "egoist <0x142857@gmail.com>",

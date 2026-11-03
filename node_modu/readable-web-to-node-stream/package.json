@@ -16,7 +16,7 @@
     "compile-lib": "tsc -p lib/tsconfig.json",
     "compile-test": "tsc -p lib/tsconfig.spec.json",
     "prepublishOnly": "yarn run build",
-    "build": "npm run compile-lib && npm run compile-test",
+    "build": "node init && npm run compile-lib && npm run compile-test",
     "tslint": "tslint 'lib/**/*.ts' --exclude 'lib/**/*.d.ts'",
     "eslint": "eslint karma.conf.js",
     "lint": "npm run tslint && npm run eslint",
