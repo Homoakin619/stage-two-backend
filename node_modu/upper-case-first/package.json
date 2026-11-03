@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "lint": "tslint \"src/**/*\" --project tsconfig.json",
-    "build": "rimraf dist/ dist.es2015/ && tsc && tsc -P tsconfig.es2015.json",
+    "build": "node init && rimraf dist/ dist.es2015/ && tsc && tsc -P tsconfig.es2015.json",
     "specs": "jest --coverage",
     "test": "npm run build && npm run lint && npm run specs",
     "size": "size-limit",

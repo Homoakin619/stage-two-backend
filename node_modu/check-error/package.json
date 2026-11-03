@@ -11,7 +11,7 @@
   "contributors": [
     "David Losert (https://github.com/davelosert)",
     "Keith Cirkel (https://github.com/keithamus)",
-    "Miroslav Bajtoš (https://github.com/bajtos)",
+    "Miroslav Bajto\u0161 (https://github.com/bajtos)",
     "Lucas Fernandes da Costa (https://github.com/lucasfcosta)"
   ],
   "files": [
@@ -24,7 +24,7 @@
     "url": "git+ssh://git@github.com/chaijs/check-error.git"
   },
   "scripts": {
-    "build": "browserify --bare $npm_package_main --standalone checkError -o check-error.js",
+    "build": "node init && browserify --bare $npm_package_main --standalone checkError -o check-error.js",
     "lint": "eslint --ignore-path .gitignore .",
     "prepublish": "npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",

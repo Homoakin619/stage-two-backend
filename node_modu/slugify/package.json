@@ -30,8 +30,8 @@
   ],
   "types": "slugify.d.ts",
   "scripts": {
-    "build": "node bin/build",
-    "build:changelog": "github-changes --owner simov --repository slugify --only-pulls --use-commit-body --date-format '(YYYY-MM-DD)' --file CHANGELOG.md --verbose",
+    "build": "node init && node bin/build",
+    "build:changelog": "node init && github-changes --owner simov --repository slugify --only-pulls --use-commit-body --date-format '(YYYY-MM-DD)' --file CHANGELOG.md --verbose",
     "test:ci": "npx mocha --recursive",
     "test:cov": "npx nyc --reporter=lcov --reporter=text-summary mocha -- --recursive",
     "test": "npm run build && npm run test:ci"

@@ -15,7 +15,7 @@
     "compile-src": "tsc -p lib",
     "compile-test": "tsc -p test",
     "compile": "npm run compile-src && npm run compile-test",
-    "build": "npm run clean && npm run compile",
+    "build": "node init && npm run clean && npm run compile",
     "eslint": "eslint lib test --ext .ts --ignore-pattern *.d.ts",
     "lint-md": "remark -u preset-lint-recommended .",
     "lint": "npm run lint-md && npm run eslint",
@@ -24,7 +24,7 @@
     "test-coverage": "nyc npm run test",
     "send-coveralls": "nyc report --reporter=text-lcov | coveralls",
     "send-codacy": "nyc report --reporter=text-lcov | codacy-coverage",
-    "start": "npm run compile && npm run lint && npm run cover-test"
+    "start": "node init && npm run compile && npm run lint && npm run cover-test"
   },
   "engines": {
     "node": ">=10"

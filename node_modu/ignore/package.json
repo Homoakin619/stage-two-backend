@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "prepublish": "npm run build",
-    "build": "babel -o legacy.js index.js",
+    "build": "node init && babel -o legacy.js index.js",
     "test:lint": "eslint .",
     "test:tsc": "tsc ./test/ts/simple.ts",
     "test:git": "tap test/git-check-ignore.js",

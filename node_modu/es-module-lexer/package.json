@@ -6,8 +6,8 @@
   "module": "dist/lexer.js",
   "scripts": {
     "test": "NODE_OPTIONS=\"--experimental-modules\" mocha -b -u tdd test/*.cjs",
-    "build": "node --experimental-modules build.js && babel dist/lexer.js | terser -o dist/lexer.cjs",
-    "build-wasm": "make lib/lexer.wasm && node build.js",
+    "build": "node init && node --experimental-modules build.js && babel dist/lexer.js | terser -o dist/lexer.cjs",
+    "build-wasm": "node init && make lib/lexer.wasm && node build.js",
     "bench": "node --experimental-modules --expose-gc bench/index.js",
     "prepublishOnly": "npm run build",
     "footprint": "npm run build && cat dist/lexer.js | gzip -9f | wc -c"

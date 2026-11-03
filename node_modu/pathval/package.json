@@ -20,7 +20,7 @@
     "url": "git+ssh://git@github.com/chaijs/pathval.git"
   },
   "scripts": {
-    "build": "browserify --standalone pathval -o pathval.js",
+    "build": "node init && browserify --standalone pathval -o pathval.js",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build",

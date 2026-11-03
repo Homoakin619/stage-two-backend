@@ -23,9 +23,9 @@
   },
   "scripts": {
     "prepublishOnly": "gulp prepublish",
-    "build": "gulp build",
+    "build": "node init && gulp build",
     "test": "gulp test",
-    "start": "gulp start"
+    "start": "node init && gulp start"
   },
   "repository": {
     "type": "git",

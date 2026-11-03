@@ -14,8 +14,8 @@
     "default": "./dist/empty.js"
   },
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
+    "build": "node init && tsc",
+    "build:watch": "node init && tsc --watch",
     "prepublish": "yarn build",
     "test": "echo e2e test in pg package"
   },

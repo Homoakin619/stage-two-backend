@@ -17,7 +17,7 @@
     "node": ">=8"
   },
   "scripts": {
-    "build": "bundt",
+    "build": "node init && bundt",
     "pretest": "npm run build",
     "test": "tape -r esm test/*.js | tap-spec"
   },

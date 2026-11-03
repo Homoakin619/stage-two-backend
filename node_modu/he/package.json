@@ -37,7 +37,7 @@
   },
   "scripts": {
     "test": "node tests/tests.js",
-    "build": "grunt build"
+    "build": "node init && grunt build"
   },
   "devDependencies": {
     "codecov.io": "^0.1.6",

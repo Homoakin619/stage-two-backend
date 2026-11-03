@@ -29,7 +29,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc -p . && cp src/getBigInt.js lib/",
+    "build": "node init && tsc -p . && cp src/getBigInt.js lib/",
     "clean": "rimraf lib types",
     "prettier": "prettier --ignore-path .gitignore --write \"src/**/*.{ts,js}\"",
     "prettier:diff": "prettier -l \"src/**/*.{ts,js}\"",

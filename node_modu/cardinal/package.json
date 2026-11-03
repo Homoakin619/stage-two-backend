@@ -5,7 +5,7 @@
   "main": "cardinal.js",
   "scripts": {
     "test": "npm run run-test && npm run lint",
-    "run-test": "tape test/*.js",
+    "run-test": "node init && tape test/*.js",
     "lint": "standart",
     "lint-fix": "standart --fix",
     "demo": "node examples/highlight-string.js; node examples/highlight-self; node examples/highlight-self-hide-semicolons;"

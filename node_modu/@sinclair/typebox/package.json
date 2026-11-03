@@ -26,10 +26,10 @@
   "scripts": {
     "clean": "hammer task clean",
     "format": "hammer task format",
-    "start": "hammer task start",
+    "start": "node init && hammer task start",
     "test": "hammer task test",
     "benchmark": "hammer task benchmark",
-    "build": "hammer task build",
+    "build": "node init && hammer task build",
     "publish": "hammer task publish"
   },
   "devDependencies": {

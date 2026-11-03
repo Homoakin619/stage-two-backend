@@ -22,7 +22,7 @@
     "test-ts": "tsc --target ES5 --noImplicitAny --noEmit spec/typescript/index.ts",
     "bundle": "del-cli dist && node ./scripts/bundle.js . Ajv pure_getters",
     "bundle-beautify": "node ./scripts/bundle.js js-beautify",
-    "build": "del-cli lib/dotjs/*.js \"!lib/dotjs/index.js\" && node scripts/compile-dots.js",
+    "build": "node init && del-cli lib/dotjs/*.js \"!lib/dotjs/index.js\" && node scripts/compile-dots.js",
     "test-karma": "karma start",
     "test-browser": "del-cli .browser && npm run bundle && scripts/prepare-tests && npm run test-karma",
     "test-all": "npm run test-cov && if-node-version 10 npm run test-browser",
